@@ -1,0 +1,32 @@
+server:
+  port: 9999
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true
+spring:
+  cloud:
+    gateway:
+      metrics:
+        enabled: true
+      discovery:
+        locator:
+          lower-case-service-id: true
+          enabled: true       
+
+# spring:
+#     cloud:
+#         gateway:
+#             routes:
+#             - id: spring_guide
+#               uri: https://spring.io/
+#               predicates:
+#               - Path=/hello
+#               filters:
+#               - SetPath=/guides
+
+                
